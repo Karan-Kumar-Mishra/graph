@@ -21,6 +21,14 @@ public:
          }
       }
    }
+   ~Graph()
+   {
+      for (int i = 0; i < m; i++)
+      {
+         delete[] arr[i];
+      }
+      delete[] arr;
+   }
    void add_adge()
    {
       cout << "\t\t\t\tEnter the source => ";
